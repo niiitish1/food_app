@@ -1,7 +1,8 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:food_app/onboading/on_boarding_info.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 class OnBoarding extends StatefulWidget {
   const OnBoarding({Key? key}) : super(key: key);
@@ -11,9 +12,6 @@ class OnBoarding extends StatefulWidget {
 }
 
 class _OnBoardingState extends State<OnBoarding> {
-  @override
-  
-
   final controller = OnBoardingList();
   @override
   Widget build(BuildContext context) {

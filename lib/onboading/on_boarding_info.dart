@@ -20,17 +20,17 @@ class OnBoardingList extends GetxController {
       pageController.nextPage(
           duration: const Duration(milliseconds: 300), curve: Curves.easeIn);
     } else {
+      SharedPreferences.getInstance().then((value) {
+        value.setBool('onBoarding_done', true);
+      });
       Navigator.push(
         context,
         MaterialPageRoute(
           builder: (context) => HomePage(),
         ),
       );
-      
     }
   }
-
-  
 
   List<OnBoardingInfo> boardinglist = [
     OnBoardingInfo('assets/order.png', 'Order Your Food',
